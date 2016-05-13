@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.i(MY_TAG, "onPause");
-        /* it calls when press the home button*/
+        /* it calls when press the home button
+        * If you only switch to multitasking view, it only executes onPause*/
     }
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         Log.i(MY_TAG, "onRestart");
+        /* when returning to the */
     }
 
 
