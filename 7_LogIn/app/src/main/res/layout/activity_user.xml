@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jacka.a7_login.user.UserActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Professor O&apos;Hallaron works in the broad area of computer systems, with specific interests in scientific computing, parallel computing, computational database systems, and virtualization. He is currently leading (with Jacobo Bielak, CEE) the Carnegie Mellon Quake project, which is developing the capability to predict the motion of the ground during strong earthquakes. He is also leading, with Greg Ganger (ECE) and Natassa Ailimaki (SCS), an effort to develop Comptutational Database Systems that represent massive scientific datasets as database structures and that perform the scientific computing process by creating, querying, and updating these databases. Finally he is also working with Satya (CMU CS) and Mike Kozutch (Intel Lab Pittsburgh) on Internet Suspend/Resume, which combines virtual machines and distributed storage systems to allow people to access their personal computers from any other computer.  In 1998 the CMU School of Computer Science awarded Professor O&apos;Hallaron and the other members of the CMU Quake Project the Allen Newell Medal for Research Excellence. In 2000, a benchmark he developed for the Quake project, 183.equake, was selected by SPEC for inclusion in the influential CPU2000 and CPU2000omp (Open MP) benchmark suites. In November, 2003, Prof O&apos;Hallaron and the other members of the Quake team won the 2003 Gordon Bell Prize, the top international prize in high performance computing. In Spring 2004, he was awarded the Herbert Simon Award for Teaching Excellence by the CMU School of Computer Science. With Randy Bryant, he recently published a new core computer systems text (Computer Systems: A Programmer&apos;s Perspective, Prentice Hall, 2003) that has been adopted by numerous schools worldwide. "
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">7_LogIn</string>
+    <string name="loginpageTitle">LoginPage</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="attempt">Attempt:</string>
+    <string name="login">Login</string>
+</resources>
