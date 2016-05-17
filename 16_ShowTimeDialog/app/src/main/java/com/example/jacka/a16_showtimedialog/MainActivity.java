@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected Dialog onCreateDialog(int id) {
         if (id == DIALOG_ID) {
             /* Todo: see what is this. */
+            /*  DatePickerDialog (Context context, DatePickerDialog.OnDateSetListener callBack, int year, int monthOfYear, int dayOfMonth) */
             return new TimePickerDialog(MainActivity.this, kTimeSetListener, hourX, minutesX, false);
         }
 
