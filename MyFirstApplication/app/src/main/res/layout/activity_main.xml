@@ -14,5 +14,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/edit_message"
         android:hint="@string/edit_message" />
-    <!--This @string/edit_message -->
+    <!--This @string/edit_message indicates a edit_message -->
 </LinearLayout>
