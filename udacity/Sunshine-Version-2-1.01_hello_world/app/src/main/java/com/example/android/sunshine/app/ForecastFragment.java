@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,6 +36,16 @@ public class ForecastFragment extends Fragment {
     public ForecastFragment() {
     }
 
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        /* This is creating fragments and happens before the view */
+        super.onCreate(savedInstanceState);
+
+        // Add this line in order for this fragment to handle menu events.
+        setHasOptionsMenu(true);
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,14 +58,6 @@ public class ForecastFragment extends Fragment {
                 "Thurs 6/26 - Rainy - 18/11",
                 "Fri 6/27 - Foggy - 21/10",
                 "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
-                "Sun 6/29 - Sunny - 20/7",
-                "Mon 6/23 - Sunny - 31/17",
-                "Tue 6/24 - Foggy - 21/8",
-                "Wed 6/25 - Cloudy - 22/17",
-                "Thurs 6/26 - Rainy - 18/11",
-                "Fri 6/27 - Foggy - 21/10",
-                "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
-                "Sun 6/29 - Sunny - 20/7"
         };
         List<String> weekForecast = new ArrayList<>(Arrays.asList(data));
         mForecastAdapter = new ArrayAdapter<String>(
@@ -71,6 +77,26 @@ public class ForecastFragment extends Fragment {
 
         return rootView;
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // this one adds button to the menu.
+        inflater.inflate(R.menu.forecastfragment, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_refresh) {
+            Toast.makeText(getActivity(), "Clicked on action refresh", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     public class FetchWeatherTask extends AsyncTask<Void, Void, Void> {
 
